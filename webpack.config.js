@@ -5,14 +5,14 @@ const yaml = require('yamljs');
 const json5 = require('json5');
 
 module.exports = {
- mode: 'development',
+  mode: 'development',
   entry: './src/index.js',
-   devServer: {
+  devServer: {
     static: './dist',
   },
   plugins: [
     new HtmlWebpackPlugin({
-    template: './src/index.html',
+      template: './src/index.html',
     }),
   ],
   output: {
@@ -20,21 +20,21 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
-   module: {
+  module: {
     rules: [
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
-       {
+      {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
-        {
+      {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
       },
-       {
+      {
         test: /\.(csv|tsv)$/i,
         use: ['csv-loader'],
       },
@@ -42,7 +42,7 @@ module.exports = {
         test: /\.xml$/i,
         use: ['xml-loader'],
       },
-       {
+      {
         test: /\.toml$/i,
         type: 'json',
         parser: {

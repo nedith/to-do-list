@@ -1,12 +1,12 @@
 * {
- padding: 0;
- margin: 0;
- box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html {
- font-family: 'Courier New', Courier, monospace;
- font-size: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
 }
 
 .container {
@@ -97,4 +97,3 @@ html {
   background: none;
   border: none;
 }
-
