@@ -5,10 +5,14 @@ const yaml = require('yamljs');
 const json5 = require('json5');
 
 module.exports = {
+ mode: 'development',
   entry: './src/index.js',
+   devServer: {
+    static: './dist',
+  },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Output Management',
+    template: './src/index.html',
     }),
   ],
   output: {
