@@ -85,6 +85,11 @@ html {
   padding: 0.5rem;
 }
 
+.input-container i {
+  color: #cfcfcf;
+  font-size: 1.5rem;
+}
+
 .input-container input::placeholder {
   font-style: italic;
   color: #cfcfcf;
