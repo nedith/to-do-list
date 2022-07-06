@@ -1,12 +1,11 @@
 /* eslint-disable-next-line no-unused-vars */
-// Imports
-import Task from './task.js';
+
+import Task from './task';
 import './style.css';
 
 // Declare HTML elements
 const mainInput = document.getElementById('add');
 const listOfTasks = document.querySelector('.list');
-const clearAll = document.querySelector('.clear-all');
 
 // Create array to store tasks
 let taskArray = [] || JSON.parse(localStorage.getItem('items'));
@@ -57,7 +56,7 @@ const removeItems = (li) => {
   const parsedItems = localStorage.getItem('items');
   let localData = JSON.parse(parsedItems);
   // Filter elements that are true
-  taskArray = JSON.parse(localStorage.getItem('items')); 
+  taskArray = JSON.parse(localStorage.getItem('items'));
   taskArray.splice((li.id) - 1, 1);
   localData = taskArray;
   // Update index of elements
@@ -177,4 +176,3 @@ const getItemsLocal = () => {
   });
 };
 window.addEventListener('load', getItemsLocal);
-
