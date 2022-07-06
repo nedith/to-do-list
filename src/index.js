@@ -49,17 +49,17 @@ const editItems = (oldItem) => {
   });
 };
 
-// Remove items
+// Remove Tasks
 const removeItems = (li) => {
   listOfTasks.removeChild(li);
   let count = 1;
   const parsedItems = localStorage.getItem('items');
   let localData = JSON.parse(parsedItems);
-  // Filter elements that are true
+  // Filter tasks that are true
   taskArray = JSON.parse(localStorage.getItem('items'));
   taskArray.splice((li.id) - 1, 1);
   localData = taskArray;
-  // Update index of elements
+  // Update index of tasks
   localData.map((item) => {
     item.index = count;
     count += 1;
@@ -95,12 +95,12 @@ const addNewTask = (newDescription) => {
       completeItem();
     });
   });
-  // Create and send new item to local storage
+  // Create and send new task to local storage
   const newListItem = new Task(newDescription, false, checkbox.length);
   taskArray.push(newListItem);
   const stringedItems = JSON.stringify(taskArray);
   localStorage.setItem('items', stringedItems);
-  // Edit items
+  // Edit task
   const editItem = document.querySelectorAll('.ellipsis');
   editItem.forEach((item) => {
     item.addEventListener('click', () => {
@@ -108,7 +108,7 @@ const addNewTask = (newDescription) => {
       editItems(item.previousElementSibling);
     });
   });
-  // Remove items
+  // Remove tasks
   const removeItem = document.querySelectorAll('.trashcan');
   removeItem.forEach((item) => {
     item.addEventListener('click', () => {
@@ -167,7 +167,7 @@ const getItemsLocal = () => {
       completeItem();
     });
   });
-  // Remove items
+  // Remove tasks
   const removeItem = document.querySelectorAll('.trashcan');
   removeItem.forEach((item) => {
     item.addEventListener('click', () => {
