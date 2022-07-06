@@ -1,32 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"/>
+      <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"/>
-     <link href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
-     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <title>To-do List</title>
-  </head>
-  <body>
-    <section class="container">
-      <div class="title">
-        <h2>Today's To Do</h2>
-        <i class="fa-solid fa-rotate"></i>
-      </div>
-      <div class="input-container">
-        <input type="text" placeholder="Add to your list..." />
-        <i class="fa fa-arrow-left"></i>
-      </div>
-      <ul class="list"></ul>
-      <div class="clear-container">
-        <button class="btn-clear">Clear all completed</button>
-      </div>
+</head>
+
+<body>
+    <section id="main-section">
+        <div class="header">
+            <h1>Today's To Do</h1>
+            <button><i class="fa-solid fa-arrows-rotate"></i></button>
+        </div>
+        <form>
+            <input id="add" type="text" placeholder="Add to your list...">
+            <div class="list"></div>
+            <button type="button" class="clear-all">Clear All Completed</button>
+        </form>
     </section>
-  </body>
+</body>
+
 </html>
