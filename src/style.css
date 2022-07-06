@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 15%;
+  margin-bottom: 10%;
+  border: 1px solid #e6e6e6;
+}
+
+.title,
+.input-container,
+.list {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 20px;
+}
+
+.title,
+.input-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title i {
+  color: #cfcfcf;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.list {
+  list-style: none;
+  font-size: 20px;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.list .list-div {
+  display: flex;
+  align-items: center;
+}
+
+.title h3 {
+  font-size: 32px;
+  color: #454545;
+}
+
+.list .list-div h3 {
+  font-size: 1.5rem;
+  padding: 0 15px;
+  color: #818080;
+  font-style: italic;
+}
+
+.icon i {
+  color: #cfcfcf;
+  font-size: 1.5rem;
+  cursor: cell;
+}
+
+.clear-container {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  background-color: #f8f8f8;
+}
+
+.input-container input {
+  border: none;
+  font-size: 20px;
+  padding: 0.5rem;
+}
+
+.input-container i {
+  color: #cfcfcf;
+  font-size: 1.5rem;
+}
+
+.input-container input::placeholder {
+  font-style: italic;
+  color: #cfcfcf;
+}
+
+.btn-clear {
+  color: #5c5c5c;
+  font-size: 30px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
