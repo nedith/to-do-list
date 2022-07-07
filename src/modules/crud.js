@@ -4,22 +4,10 @@ import Task from './task';
 import { completeItem } from './status';
 
 const listOfTasks = document.querySelector('.list');
+const clearAll = document.querySelector('.clear-all');
 
 // Create array to store tasks
 let taskArray = [] || JSON.parse(localStorage.getItem('items'));
-// const completeItem = () => {
-//   const localData = localStorage.getItem('items');
-//   const parsedData = JSON.parse(localData);
-//   const eachItem = document.querySelectorAll('.eachItem');
-//   for (let i = 0; i < eachItem.length; i += 1) {
-//     if (eachItem[i].classList.contains('strike')) {
-//       parsedData[i].completed = true;
-//     } else {
-//       parsedData[i].completed = false;
-//     }
-//     localStorage.setItem('items', JSON.stringify(parsedData));
-//   }
-// };
 
 // Edit Tasks
 const editItems = (oldItem) => {
@@ -115,6 +103,20 @@ const addNewTask = (newDescription) => {
   });
 };
 
+// Clear all tasks
+const clearAllItems = () => {
+  clearAll.addEventListener('click', () => {
+    const localItems = localStorage.getItem('items');
+    const parsedData = JSON.parse(localItems);
+    const checkDelete = parsedData.filter((item) => item.completed === false);
+    for (let i = 0; i < checkDelete.length; i += 1) {
+      checkDelete[i].index = i + 1;
+    }
+    localStorage.setItem('items', JSON.stringify(checkDelete));
+    window.location.reload();
+  });
+};
+
 // Get data from local storage changes
 const getItemsLocal = () => {
   const localItems = localStorage.getItem('items');
@@ -146,6 +148,7 @@ const getItemsLocal = () => {
     return null;
   });
 
+  // Add event listener for checkbox
   const checkbox = document.querySelectorAll('.checkbox');
   checkbox.forEach((checkboxInput) => {
     checkboxInput.addEventListener('click', () => {
@@ -158,6 +161,7 @@ const getItemsLocal = () => {
       completeItem();
     });
   });
+
   // Remove tasks
   const removeItem = document.querySelectorAll('.trashcan');
   removeItem.forEach((item) => {
@@ -165,6 +169,7 @@ const getItemsLocal = () => {
       removeItems(item.children[0].parentNode.parentNode);
     });
   });
+  clearAllItems();
 };
 window.addEventListener('load', getItemsLocal);
 
