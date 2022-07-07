@@ -119,3 +119,7 @@ button {
 .clicked-on {
   background-color: #fffed3;
 }
+
+.refresh {
+  cursor: pointer;
+}
