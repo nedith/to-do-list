@@ -1,39 +1,15 @@
 /* eslint-disable-next-line no-unused-vars */
-import _ from 'lodash';
+
 import './style.css';
+import addNewTask from './modules/crud';
 
-const tasks = [
-  {
-    description: 'Clean the house',
-    completed: true,
-    index: 1,
-  },
-  {
-    description: 'Prepare breakfast',
-    completed: false,
-    index: 2,
-  },
-  {
-    description: 'Study',
-    completed: true,
-    index: 3,
-  },
-];
+// Declare HTML elements
+const mainInput = document.getElementById('add');
 
-const populate = () => {
-  const list = document.querySelector('.list');
-  for (let i = 0; i < tasks.length; i += 1) {
-    const li = document.createElement('li');
-    li.classList.add('list-content');
-    li.innerHTML = `
-  <div class =list-div>
-  <input type = "checkbox">
-  <h3>${tasks[i].description}</h3>
-  </div>
-  <div class="icon">
-  <i class="fa-solid fa-ellipsis-vertical"></i>
-  </div>`;
-    list.appendChild(li);
+// Add event listener to input field
+mainInput.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter' && mainInput.value) {
+    addNewTask(mainInput.value);
+    mainInput.value = null;
   }
-};
-populate();
+});
