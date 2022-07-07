@@ -1,6 +1,7 @@
-import _ from 'lodash';
+/* eslint-disable-next-line no-unused-vars */
+
 import './style.css';
-import { addNewTask } from './modules/crud';
+import addNewTask from './modules/crud';
 
 // Declare HTML elements
 const mainInput = document.getElementById('add');
@@ -14,4 +15,4 @@ mainInput.addEventListener('keypress', (e) => {
   }
 });
 
-export { listOfTasks };
+export default { listOfTasks };
