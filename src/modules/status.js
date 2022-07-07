@@ -13,4 +13,4 @@ const completeItem = () => {
   }
 };
 
-export { completeItem };
+export default completeItem;

@@ -1,7 +1,7 @@
 /* eslint-disable-next-line no-unused-vars */
 
 import Task from './task';
-import { completeItem } from './status';
+import completeItem from './status';
 
 const listOfTasks = document.querySelector('.list');
 const clearAll = document.querySelector('.clear-all');
