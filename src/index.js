@@ -5,7 +5,6 @@ import addNewTask from './modules/crud';
 
 // Declare HTML elements
 const mainInput = document.getElementById('add');
-const listOfTasks = document.querySelector('.list');
 
 // Add event listener to input field
 mainInput.addEventListener('keypress', (e) => {
@@ -14,5 +13,3 @@ mainInput.addEventListener('keypress', (e) => {
     mainInput.value = null;
   }
 });
-
-export default listOfTasks;

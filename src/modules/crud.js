@@ -1,7 +1,8 @@
 /* eslint-disable-next-line no-unused-vars */
 
 import Task from './task';
-import listOfTasks from '../index';
+
+const listOfTasks = document.querySelector('.list');
 
 // Create array to store tasks
 let taskArray = [] || JSON.parse(localStorage.getItem('items'));
