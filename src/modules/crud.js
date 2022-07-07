@@ -1,7 +1,7 @@
 /* eslint-disable-next-line no-unused-vars */
 
 import Task from './task';
-import listOfTasks from '../index';
+import {listOfTasks} from '../index';
 
 // Create array to store tasks
 let taskArray = [] || JSON.parse(localStorage.getItem('items'));
@@ -166,4 +166,4 @@ const getItemsLocal = () => {
 };
 window.addEventListener('load', getItemsLocal);
 
-export default addNewTask;
+export {addNewTask};
