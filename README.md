@@ -2,7 +2,11 @@
 
 # To-do-List
 
-> This is a website for creating to-do tasks
+> This is a website for a to-do list. A user can add, remove and edit tasks and all changes are stored in local storage
+
+## Live Demo 
+
+- Please click on  this [Link](https://nedith.github.io/to-do-list/) for a live demo
 
 ## Built With
 
