@@ -1,24 +1,25 @@
 /* eslint-disable-next-line no-unused-vars */
 
 import Task from './task';
+import { completeItem } from './status';
 
 const listOfTasks = document.querySelector('.list');
 
 // Create array to store tasks
 let taskArray = [] || JSON.parse(localStorage.getItem('items'));
-const completeItem = () => {
-  const localData = localStorage.getItem('items');
-  const parsedData = JSON.parse(localData);
-  const eachItem = document.querySelectorAll('.eachItem');
-  for (let i = 0; i < eachItem.length; i += 1) {
-    if (eachItem[i].classList.contains('strike')) {
-      parsedData[i].completed = true;
-    } else {
-      parsedData[i].completed = false;
-    }
-    localStorage.setItem('items', JSON.stringify(parsedData));
-  }
-};
+// const completeItem = () => {
+//   const localData = localStorage.getItem('items');
+//   const parsedData = JSON.parse(localData);
+//   const eachItem = document.querySelectorAll('.eachItem');
+//   for (let i = 0; i < eachItem.length; i += 1) {
+//     if (eachItem[i].classList.contains('strike')) {
+//       parsedData[i].completed = true;
+//     } else {
+//       parsedData[i].completed = false;
+//     }
+//     localStorage.setItem('items', JSON.stringify(parsedData));
+//   }
+// };
 
 // Edit Tasks
 const editItems = (oldItem) => {
