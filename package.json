@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
-    "build": "webpack"
+    "build": "webpack",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -18,10 +20,11 @@
   "bugs": {
     "url": "https://github.com/nedith/to-do-list/issues"
   },
-  "homepage": "https://github.com/nedith/to-do-list#readme",
+  "homepage": "https://nedith.github.io/to-do-list/",
   "devDependencies": {
     "css-loader": "^6.7.1",
     "csv-loader": "^3.0.3",
+    "gh-pages": "^4.0.0",
     "html-webpack-plugin": "^5.5.0",
     "json5": "^2.2.1",
     "style-loader": "^3.3.1",
